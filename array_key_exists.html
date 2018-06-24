@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>array_kay_exists</title>
+</head>
+<body>
+	Javascript array_kay_exists
+	
+	<script>
+       //my example array and object
+		var myArray=[];
+		myArray[0]=['html'];
+		myArray['A']=['javascript'];
+		myArray[2]=['css'];
+		var myobject={0:'html',a:'javascript',2:'css'}
+		//my example array and object
+
+
+
+		// only use this code for  parsing parmeter  
+		function array_key_exists(search_array=array(),search_key){
+			var key_array=[];
+			for (key in search_array) {
+				key_array.push(key);
+			}
+			return (key_array.indexOf(search_key) > -1)?true:false 
+		}
+		// only use this code for parsing parmeter 
+
+
+		
+
+		// see result
+		console.log(array_key_exists(myArray,'A'));//return true
+		console.log(array_key_exists(myArray,'1'));// return  false
+		console.log(array_key_exists(myobject,'ab'));// return  false
+		console.log(array_key_exists(myobject,'a'));// return  true
+
+		
+		
+
+	</script>
+	
+</body>
+</html>
